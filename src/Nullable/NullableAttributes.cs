@@ -1,8 +1,9 @@
-﻿#nullable enable
+﻿#if !NULLABLE_DISABLE_ATTRIBUTES
+#nullable enable
 
 namespace System.Diagnostics.CodeAnalysis
 {
-    using System;
+    using global::System;
 
     /// <summary>
     ///     Specifies that <see langword="null"/> is allowed as an input even if the
@@ -12,6 +13,9 @@ namespace System.Diagnostics.CodeAnalysis
         AttributeTargets.Field | AttributeTargets.Parameter | AttributeTargets.Property, 
         Inherited = false
     )]
+#if NULLABLE_EXCLUDE_FROM_CODE_COVERAGE
+    [ExcludeFromCodeCoverage]
+#endif
     internal sealed class AllowNullAttribute : Attribute
     {
         /// <summary>
@@ -28,6 +32,9 @@ namespace System.Diagnostics.CodeAnalysis
         AttributeTargets.Field | AttributeTargets.Parameter | AttributeTargets.Property, 
         Inherited = false
     )]
+#if NULLABLE_EXCLUDE_FROM_CODE_COVERAGE
+    [ExcludeFromCodeCoverage]
+#endif
     internal sealed class DisallowNullAttribute : Attribute
     {
         /// <summary>
@@ -40,6 +47,9 @@ namespace System.Diagnostics.CodeAnalysis
     ///     Specifies that a method that will never return under any circumstance.
     /// </summary>
     [AttributeUsage(AttributeTargets.Method, Inherited = false)]
+#if NULLABLE_EXCLUDE_FROM_CODE_COVERAGE
+    [ExcludeFromCodeCoverage]
+#endif
     internal sealed class DoesNotReturnAttribute : Attribute
     {
         /// <summary>
@@ -53,6 +63,9 @@ namespace System.Diagnostics.CodeAnalysis
     ///     parameter is passed the specified value.
     /// </summary>
     [AttributeUsage(AttributeTargets.Parameter, Inherited = false)]
+#if NULLABLE_EXCLUDE_FROM_CODE_COVERAGE
+    [ExcludeFromCodeCoverage]
+#endif
     internal sealed class DoesNotReturnIfAttribute : Attribute
     {
         /// <summary>
@@ -86,6 +99,9 @@ namespace System.Diagnostics.CodeAnalysis
         AttributeTargets.Property | AttributeTargets.ReturnValue, 
         Inherited = false
     )]
+#if NULLABLE_EXCLUDE_FROM_CODE_COVERAGE
+    [ExcludeFromCodeCoverage]
+#endif
     internal sealed class MaybeNullAttribute : Attribute
     {
         /// <summary>
@@ -99,6 +115,9 @@ namespace System.Diagnostics.CodeAnalysis
     ///     the parameter may be <see langword="null"/> even if the corresponding type disallows it.
     /// </summary>
     [AttributeUsage(AttributeTargets.Parameter, Inherited = false)]
+#if NULLABLE_EXCLUDE_FROM_CODE_COVERAGE
+    [ExcludeFromCodeCoverage]
+#endif
     internal sealed class MaybeNullWhenAttribute : Attribute
     {
         /// <summary>
@@ -129,6 +148,9 @@ namespace System.Diagnostics.CodeAnalysis
         AttributeTargets.Property | AttributeTargets.ReturnValue, 
         Inherited = false
     )]
+#if NULLABLE_EXCLUDE_FROM_CODE_COVERAGE
+    [ExcludeFromCodeCoverage]
+#endif
     internal sealed class NotNullAttribute : Attribute
     {
         /// <summary>
@@ -146,6 +168,9 @@ namespace System.Diagnostics.CodeAnalysis
         AllowMultiple = true, 
         Inherited = false
     )]
+#if NULLABLE_EXCLUDE_FROM_CODE_COVERAGE
+    [ExcludeFromCodeCoverage]
+#endif
     internal sealed class NotNullIfNotNullAttribute : Attribute
     {
         /// <summary>
@@ -177,6 +202,9 @@ namespace System.Diagnostics.CodeAnalysis
     ///     the parameter will not be <see langword="null"/> even if the corresponding type allows it.
     /// </summary>
     [AttributeUsage(AttributeTargets.Parameter, Inherited = false)]
+#if NULLABLE_EXCLUDE_FROM_CODE_COVERAGE
+    [ExcludeFromCodeCoverage]
+#endif
     internal sealed class NotNullWhenAttribute : Attribute
     {
         /// <summary>
@@ -201,3 +229,4 @@ namespace System.Diagnostics.CodeAnalysis
 }
 
 #nullable restore
+#endif // NULLABLE_DISABLE_ATTRIBUTES

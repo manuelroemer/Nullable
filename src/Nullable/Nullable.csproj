@@ -2,8 +2,9 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
-    <RootNamespace>System.Diagnostics.CodeAnalysis</RootNamespace>
     <LangVersion>8.0</LangVersion>
+    <Nullable>enable</Nullable>
+    <RootNamespace>System.Diagnostics.CodeAnalysis</RootNamespace>    
   </PropertyGroup>
 
 </Project>
