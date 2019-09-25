@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>Nullable</id>
+    <version>0.0.1-preview</version>
+    <developmentDependency>true</developmentDependency>
+    <authors>Manuel Römer</authors>
+    <license type="expression">MIT</license>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <projectUrl>https://github.com/manuelroemer/Nullable</projectUrl>
+    <repository type="git" url="https://github.com/manuelroemer/Nullable"/>
+    <description>
+A source code only package which allows you to use .NET Core 3.0's new nullable attributes in older target frameworks like .NET Standard 2.0 or the "old" .NET Framework.
+
+This package does not contain any compiled binaries, but instead adds a single C# file with the attribute classes to your project. Because this C# file gets compiled together with the rest of your code, the built binaries will not have a dependency on this package, meaning that you can perfectly use this package for both libraries and applications.
+
+Please see https://github.com/manuelroemer/Nullable for additional information on how to use this package.
+    </description>
+    <releaseNotes>https://github.com/manuelroemer/Nullable/blob/master/CHANGELOG.md</releaseNotes>
+    <tags>source compiletime csharp8.0 netcore3.0 null nullable attributes allownull disallownull doesnotreturn doesnotreturnif maybenull maybenullwhen notnull notnullifnotnull notnullwhen</tags>
+    <icon>icon.png</icon>
+    <contentFiles>
+      <files include="**/*.cs.pp"/>
+    </contentFiles>
+  </metadata>
+  <files>
+    <file src="Nullable/**/*.cs.pp" exclude="**/obj/**/*.cs.pp" target="contentFiles/cs/netstandard1.0"/>
+    <file src="Nullable/**/*.cs.pp" exclude="**/obj/**/*.cs.pp" target="contentFiles/cs/net20"/>
+    <file src="../assets/Icon128x128.png" target="icon.png" />
+  </files>
+</package>
