@@ -122,7 +122,7 @@ Run this file for manually creating the package.
 
 ## Contributing
 
-I don't expect this package to require any changes, but if something is not working for you or
+I don't expect this package to require many changes, but if something is not working for you or
 if you think that the source file should change, feel free to create an issue or Pull Request.
 I will be happy to discuss and potentially integrate your ideas!
 
