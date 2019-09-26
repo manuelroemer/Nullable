@@ -22,7 +22,7 @@
 // SOFTWARE.
 #endregion
 
-// This code file is automatically added by the Nullable NuGet package.
+// This code file is automatically added by the "Nullable" NuGet package (https://www.nuget.org/packages/Nullable/).
 // Please see https://github.com/manuelroemer/Nullable for more information.
 
 #if !NULLABLE_ATTRIBUTES_DISABLE
