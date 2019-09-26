@@ -1,4 +1,4 @@
-# Nullable
+# Nullable [![Nuget](https://img.shields.io/nuget/v/Nullable)](https://www.nuget.org/packages/Nullable)
 
 _Use .NET Core 3.0's new nullable attributes in older target frameworks._
 
