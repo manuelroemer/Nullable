@@ -41,7 +41,7 @@ code.
 
 > :warning: **Important:** <br/>
 > The `Nullable` package is only compatible with projects using C# 8.0.
-> If your project is targeting a lower language version, you won't be able to compile your project
+> If your project targets a lower language version, you won't be able to compile your project
 > while this package is referenced.
 
 1. **Reference the package** <br/>
