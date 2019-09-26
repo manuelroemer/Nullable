@@ -181,7 +181,7 @@ namespace System.Diagnostics.CodeAnalysis
     internal sealed class NotNullAttribute : Attribute
     {
         /// <summary>
-        ///     Initializes a new instanceof the <see cref="NotNullAttribute"/> class.
+        ///     Initializes a new instance of the <see cref="NotNullAttribute"/> class.
         /// </summary>
         public NotNullAttribute() { }
     }
