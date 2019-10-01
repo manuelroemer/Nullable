@@ -2,7 +2,7 @@
 
 _Use .NET Core 3.0's new nullable attributes in older target frameworks._
 
-[NuGet](https://www.nuget.org/packages/nullable) &nbsp; | &nbsp; [Getting Started](#getting-started) &nbsp; | &nbsp; [Guides](https://github.com/manuelroemer/Nullable/wiki)
+[:running: Getting Started](#getting-started) &nbsp; | &nbsp; [:books: Guides](https://github.com/manuelroemer/Nullable/wiki) &nbsp; | &nbsp; [:package: NuGet](https://www.nuget.org/packages/nullable)
 
 <hr/>
 
@@ -53,6 +53,12 @@ code.
 
 
 ### Quick Installation Guide
+
+> :information_source: **Note:** <br/>
+> If you want to use the `Nullable` package with the traditional .NET Framework or project system, use [this guide](https://github.com/manuelroemer/Nullable/wiki/%5BInstallation%5D-Traditional-.csproj-format)
+> instead.
+>
+> The steps below will only work with the **new SDK `.csproj`** style!
 
 1. **Reference the package** <br/>
    Add the package to your project, for example via:
