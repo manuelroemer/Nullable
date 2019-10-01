@@ -4,7 +4,8 @@ _Use .NET Core 3.0's new nullable attributes in older target frameworks._
 
 [:running: Quickstart](#quickstart) &nbsp; | &nbsp; [:books: Guides](https://github.com/manuelroemer/Nullable/wiki) &nbsp; | &nbsp; [:package: NuGet](https://www.nuget.org/packages/nullable)
 
-<hr/>
+#
+
 
 With the release of C# 8.0, support for [nullable reference types](https://docs.microsoft.com/en-us/dotnet/csharp/tutorials/nullable-reference-types)
 has been added to the language.
