@@ -1,7 +1,10 @@
-<h1 align="center">Nullable</h1>
-<div align="center">
-   <i>Use .NET 3.0's new nullable attributes in older target frameworks.</i>
-</div>
+# Nullable [![Nuget](https://img.shields.io/nuget/v/Nullable)](https://www.nuget.org/packages/Nullable)
+
+_Use .NET Core 3.0's new nullable attributes in older target frameworks._
+
+[NuGet](https://www.nuget.org/packages/nullable) &nbsp; | &nbsp; [Getting Started](#getting-started) &nbsp; | &nbsp; [Guides](https://github.com/manuelroemer/Nullable/wiki)
+
+<hr/>
 
 With the release of C# 8.0, support for [nullable reference types](https://docs.microsoft.com/en-us/dotnet/csharp/tutorials/nullable-reference-types)
 has been added to the language.
@@ -38,7 +41,7 @@ code.
 | ![.NET Standard 2.0](.github/CompiledNetStandard2.0.png) | ![.NET Standard 2.1](.github/CompiledNetStandard2.1.png) |
 
 
-## Installation and Getting Started
+## Getting Started
 
 > :warning: **Important:** <br/>
 > You **must** use C# 8.0 with the `Nullable` package - otherwise, your project won't compile.
