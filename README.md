@@ -52,13 +52,14 @@ code.
 > to see how you can upgrade from a `packages.config` to package references.
 
 
-### Quick Installation Guide
+### Installation for projects using the new SDK `csproj` format
 
-> :information_source: **Note:** <br/>
-> If you want to use the `Nullable` package with the traditional .NET Framework or project system, use [this guide](https://github.com/manuelroemer/Nullable/wiki/%5BInstallation%5D-Traditional-.csproj-format)
-> instead.
->
-> The steps below will only work with the **new SDK `.csproj`** style!
+The steps below will only work with the **new SDK `.csproj`** style!
+
+If you want to use the `Nullable` package with the old `.csproj` format (e.g. in an older .NET Framework project),
+use [this guide](https://github.com/manuelroemer/Nullable/wiki/%5BInstallation%5D-Traditional-.csproj-format)
+instead.
+If possible, try to upgrade your project to the new SDK format.
 
 1. **Reference the package** <br/>
    Add the package to your project, for example via:
