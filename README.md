@@ -40,9 +40,15 @@ code.
 ## Installation and Getting Started
 
 > :warning: **Important:** <br/>
-> The `Nullable` package is only compatible with projects using C# 8.0.
-> If your project targets a lower language version, you won't be able to compile your project
-> while this package is referenced.
+> You **must** use C# 8.0 with the `Nullable` package - otherwise, your project won't compile.
+>
+> Currently, you can **not** use the package with a `packages.config` file.
+> See [this issue](https://github.com/manuelroemer/Nullable/issues/1) for details. <br/>
+> You may use [this guide](https://docs.microsoft.com/en-us/nuget/consume-packages/migrate-packages-config-to-package-reference)
+> to see how you can upgrade from a `packages.config` to package references.
+
+
+### Quick Installation Guide
 
 1. **Reference the package** <br/>
    Add the package to your project, for example via:
