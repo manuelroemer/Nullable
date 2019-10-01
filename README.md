@@ -1,6 +1,6 @@
 <h1 align="center">Nullable</h1>
 <div align="center">
-   _Use .NET 3.0's new nullable attributes in older target frameworks._
+   <i>Use .NET 3.0's new nullable attributes in older target frameworks.</i>
 </div>
 
 With the release of C# 8.0, support for [nullable reference types](https://docs.microsoft.com/en-us/dotnet/csharp/tutorials/nullable-reference-types)
