@@ -54,12 +54,8 @@ code.
 
 ### Installation for projects using the new SDK `csproj` format
 
-The steps below will only work with the **new SDK `.csproj`** style!
-
-If you want to use the `Nullable` package with the old `.csproj` format (e.g. in an older .NET Framework project),
-use [this guide](https://github.com/manuelroemer/Nullable/wiki/%5BInstallation%5D-Traditional-.csproj-format)
-instead.
-If possible, try to upgrade your project to the new SDK format.
+:warning: The steps below will only work with the **new SDK `.csproj`** style!
+Other installation guides can be found [here](https://github.com/manuelroemer/Nullable/wiki).
 
 1. **Reference the package** <br/>
    Add the package to your project, for example via:
@@ -88,12 +84,6 @@ If possible, try to upgrade your project to the new SDK format.
    the C# language version.
 
 Afterwards, you can immediately start using the attributes.
-
-
-As an **alternative to referencing the `Nullable` package**, you can also simply copy and paste the
-[NullableAttributes.cs](https://github.com/manuelroemer/Nullable/blob/master/src/Nullable/NullableAttributes.cs)
-file into your project.
-Be aware that you will lose benefits like automatic multi-targeting in this case.
 
 
 ## Compiler Constants
