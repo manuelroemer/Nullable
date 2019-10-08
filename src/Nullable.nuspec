@@ -29,6 +29,7 @@ Please see https://github.com/manuelroemer/Nullable for additional information o
     <!-- Nullable attributes should be included in these target frameworks. -->
     <file src="Nullable/**/*.cs.pp" exclude="**/obj/**/*.cs.pp" target="contentFiles/cs/netstandard1.0"/>
     <file src="Nullable/**/*.cs.pp" exclude="**/obj/**/*.cs.pp" target="contentFiles/cs/net20"/>
+    <file src="Nullable/**/*.cs.pp" exclude="**/obj/**/*.cs.pp" target="contentFiles/cs/net35-cf"/>
 
     <!-- Nullable attributes are not required for these target frameworks. -->
     <file src=".nuget/_._" target="contentFiles/cs/netstandard2.1"/>
