@@ -42,6 +42,17 @@ code.
 | ![.NET Standard 2.0](.github/CompiledNetStandard2.0.png) | ![.NET Standard 2.1](.github/CompiledNetStandard2.1.png) |
 
 
+## Compatibility
+
+Nullabe is currently compatible with the following target frameworks:
+
+* .NET Standard >= 1.0
+* .NET Framework >= 2.0
+
+Please have a look at the [guides](https://github.com/manuelroemer/Nullable/wiki) for additional information on how to
+install the package for your target framework.
+
+
 ## Quickstart
 
 > :warning: **Important:** <br/>
