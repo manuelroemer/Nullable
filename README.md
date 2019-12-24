@@ -21,7 +21,7 @@ compiler will still use them for generating warnings, even though the target fra
 support these attributes by itself.
 
 This repository hosts the code for the ["Nullable" NuGet Package](https://www.nuget.org/packages/Nullable)
-which adds [a single C# source code file](https://github.com/manuelroemer/Nullable/blob/master/src/Nullable/NullableAttributes.cs)
+which adds [a single C# source code file](https://github.com/manuelroemer/Nullable/blob/master/src/Nullable.ExcludeFromCodeCoverage/NullableAttributes.cs)
 redefining all of the new nullable attributes to projects which reference the package.
 
 This file is added **at compile time** and gets **built into the referencing project**.
