@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
     <id>Nullable</id>
-    <version>1.1.1</version>
+    <version>1.2.0</version>
     <developmentDependency>true</developmentDependency>
     <authors>Manuel Römer</authors>
     <license type="expression">MIT</license>
@@ -26,12 +26,36 @@ Please see https://github.com/manuelroemer/Nullable for additional information o
     </contentFiles>
   </metadata>
   <files>
-    <!-- Nullable attributes should be included in these target frameworks. -->
-    <file src="Nullable/**/*.cs.pp" exclude="**/obj/**/*.cs.pp" target="contentFiles/cs/netstandard1.0"/>
-    <file src="Nullable/**/*.cs.pp" exclude="**/obj/**/*.cs.pp" target="contentFiles/cs/net20"/>
+    <!--
+    INCLUDE the attributes in these target frameworks:
 
-    <!-- Nullable attributes are not required for these target frameworks. -->
+    The ExcludeFromCodeCoverageAttribute is available in:
+    * .NET Standard >= 2.0
+    * .NET Framework >= 4.0
+    Depending on the target framework, pick a different file which makes use/doesn't make use of that attribute.
+
+    Include the file both as 'contentFiles' (for PackageReferences) and as 'content' (for packages.config). 
+    -->
+    
+    <!-- contentFiles with ExcludeFromCodeCoverageAttribute-->
+    <file src="Nullable.ExcludeFromCodeCoverage/NullableAttributes.cs.pp" exclude="**/obj/**/*.cs.pp" target="contentFiles/cs/netstandard2.0/Nullable/NullableAttributes.cs.pp"/>
+    <file src="Nullable.ExcludeFromCodeCoverage/NullableAttributes.cs.pp" exclude="**/obj/**/*.cs.pp" target="contentFiles/cs/net40/Nullable/NullableAttributes.cs.pp"/>
+      
+    <!-- contentFiles without ExcludeFromCodeCoverageAttribute -->
+    <file src="Nullable.NoExcludeFromCodeCoverage/NullableAttributes.cs.pp" exclude="**/obj/**/*.cs.pp" target="contentFiles/cs/netstandard1.0/Nullable/NullableAttributes.cs.pp"/>
+    <file src="Nullable.NoExcludeFromCodeCoverage/NullableAttributes.cs.pp" exclude="**/obj/**/*.cs.pp" target="contentFiles/cs/net20/Nullable/NullableAttributes.cs.pp"/>
+
+    <!-- content with ExcludeFromCodeCoverageAttribute-->
+    <file src="Nullable.ExcludeFromCodeCoverage/NullableAttributes.cs.pp" exclude="**/obj/**/*.cs.pp" target="content/cs/netstandard2.0/Nullable/NullableAttributes.cs.pp"/>
+    <file src="Nullable.ExcludeFromCodeCoverage/NullableAttributes.cs.pp" exclude="**/obj/**/*.cs.pp" target="content/cs/net40/Nullable/NullableAttributes.cs.pp"/>
+      
+    <!-- content without ExcludeFromCodeCoverageAttribute -->
+    <file src="Nullable.NoExcludeFromCodeCoverage/NullableAttributes.cs.pp" exclude="**/obj/**/*.cs.pp" target="content/cs/netstandard1.0/Nullable/NullableAttributes.cs.pp"/>
+    <file src="Nullable.NoExcludeFromCodeCoverage/NullableAttributes.cs.pp" exclude="**/obj/**/*.cs.pp" target="content/cs/net20/Nullable/NullableAttributes.cs.pp"/>
+    
+    <!-- EXCLUDE the attributes in these target frameworks: -->
     <file src=".nuget/_._" target="contentFiles/cs/netstandard2.1"/>
+    <file src=".nuget/_._" target="content/cs/netstandard2.1"/>
 
     <file src="../assets/Icon128x128.png" target="icon.png" />
   </files>
