@@ -46,16 +46,16 @@ Please see https://github.com/manuelroemer/Nullable for additional information o
     <file src="Nullable.NoExcludeFromCodeCoverage/NullableAttributes.cs.pp" exclude="**/obj/**/*.cs.pp" target="contentFiles/cs/net20/Nullable/NullableAttributes.cs.pp"/>
 
     <!-- content with ExcludeFromCodeCoverageAttribute-->
-    <file src="Nullable.ExcludeFromCodeCoverage/NullableAttributes.cs.pp" exclude="**/obj/**/*.cs.pp" target="content/cs/netstandard2.0/Nullable/NullableAttributes.cs.pp"/>
-    <file src="Nullable.ExcludeFromCodeCoverage/NullableAttributes.cs.pp" exclude="**/obj/**/*.cs.pp" target="content/cs/net40/Nullable/NullableAttributes.cs.pp"/>
+    <file src="Nullable.ExcludeFromCodeCoverage/NullableAttributes.cs.pp" exclude="**/obj/**/*.cs.pp" target="content/netstandard2.0/Nullable/NullableAttributes.cs.pp"/>
+    <file src="Nullable.ExcludeFromCodeCoverage/NullableAttributes.cs.pp" exclude="**/obj/**/*.cs.pp" target="content/net40/Nullable/NullableAttributes.cs.pp"/>
       
     <!-- content without ExcludeFromCodeCoverageAttribute -->
-    <file src="Nullable.NoExcludeFromCodeCoverage/NullableAttributes.cs.pp" exclude="**/obj/**/*.cs.pp" target="content/cs/netstandard1.0/Nullable/NullableAttributes.cs.pp"/>
-    <file src="Nullable.NoExcludeFromCodeCoverage/NullableAttributes.cs.pp" exclude="**/obj/**/*.cs.pp" target="content/cs/net20/Nullable/NullableAttributes.cs.pp"/>
+    <file src="Nullable.NoExcludeFromCodeCoverage/NullableAttributes.cs.pp" exclude="**/obj/**/*.cs.pp" target="content/netstandard1.0/Nullable/NullableAttributes.cs.pp"/>
+    <file src="Nullable.NoExcludeFromCodeCoverage/NullableAttributes.cs.pp" exclude="**/obj/**/*.cs.pp" target="content/net20/Nullable/NullableAttributes.cs.pp"/>
     
     <!-- EXCLUDE the attributes in these target frameworks: -->
     <file src=".nuget/_._" target="contentFiles/cs/netstandard2.1"/>
-    <file src=".nuget/_._" target="content/cs/netstandard2.1"/>
+    <file src=".nuget/_._" target="content/netstandard2.1"/>
 
     <file src="../assets/Icon128x128.png" target="icon.png" />
   </files>
