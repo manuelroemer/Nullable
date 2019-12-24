@@ -3,7 +3,7 @@
 //   Please see https://github.com/manuelroemer/Nullable for more information.
 //
 //   IMPORTANT:
-//   NEVER DELETE THIS FILE if you are using a "packages.config" file to manage your NuGet references.
+//   DO NOT DELETE THIS FILE if you are using a "packages.config" file to manage your NuGet references.
 //   Consider migrating to PackageReferences instead:
 //   https://docs.microsoft.com/en-us/nuget/consume-packages/migrate-packages-config-to-package-reference
 //   Migrating brings the following benefits:
