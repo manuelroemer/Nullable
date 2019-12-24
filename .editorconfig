@@ -9,5 +9,5 @@ insert_final_newline = true
 end_of_line = lf
 max_line_length = 120
 
-[*.md]
+[*.md,*.nuspec,*.xml]
 indent_size=2
