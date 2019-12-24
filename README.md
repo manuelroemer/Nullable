@@ -35,7 +35,7 @@ have been added during the compilation.
 That is not the case for the library targeting .NET Standard 2.1, because the attributes are
 available through the .NET BCL there.
 This allows you to easily **multi-target** your projects without having to change a single line of
-code. 
+code.
 
 | .NET Standard 2.0 | .NET Standard 2.1 |
 | ----------------- | ----------------- |
@@ -57,14 +57,10 @@ install the package for your target framework.
 
 > :warning: **Important:** <br/>
 > You **must** use C# 8.0 with the `Nullable` package - otherwise, your project won't compile.
->
-> Currently, you can **not** use the package with a `packages.config` file.
-> See [this issue](https://github.com/manuelroemer/Nullable/issues/1) for details. <br/>
-> You may use [this guide](https://docs.microsoft.com/en-us/nuget/consume-packages/migrate-packages-config-to-package-reference)
-> to see how you can upgrade from a `packages.config` to package references.
 
-The steps below will only work with the **new SDK `.csproj`** style!
-Other installation guides can be found [here](https://github.com/manuelroemer/Nullable/wiki).
+The steps below assume that you are using the **new SDK `.csproj`** style.
+Please find installation guides and notes for other project types (for example `packages.config`)
+[here](https://github.com/manuelroemer/Nullable/wiki).
 
 1. **Reference the package** <br/>
    Add the package to your project, for example via:
@@ -84,6 +80,9 @@ Other installation guides can be found [here](https://github.com/manuelroemer/Nu
      <PrivateAssets>all</PrivateAssets>
      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
    </PackageReference>
+
+   <!-- This style also works, but is not automatically used by .NET: -->
+   <PackageReference Include="Nullable" Version="<YOUR_VERSION>" PrivateAssets="all" />
    ```
 
    This is especially important for libraries that are published to NuGet, because without this,
@@ -97,7 +96,7 @@ Afterwards, you can immediately start using the attributes.
 
 ## Compiler Constants
 
-The [included C# file](https://github.com/manuelroemer/Nullable/blob/master/src/Nullable/NullableAttributes.cs)
+The [included C# file](https://github.com/manuelroemer/Nullable/blob/master/src/Nullable.ExcludeFromCodeCoverage/NullableAttributes.cs)
 makes use of some compiler constants that can be used to enable or disable certain features.
 
 ### `NULLABLE_ATTRIBUTES_DISABLE`
@@ -109,20 +108,16 @@ In most cases, this should not be required, because the package automatically ex
 from target frameworks that already support these attributes.
 
 
-### `NULLABLE_ATTRIBUTES_EXCLUDE_FROM_CODE_COVERAGE`
+### `NULLABLE_ATTRIBUTES_INCLUDE_IN_CODE_COVERAGE`
 
-Because the attributes are added as source code, they may appear in code coverage reports.
+Because the attributes are added as source code, they could appear in code coverage reports.
+By default, this is disabled via the [`ExcludeFromCodeCoverage`](https://docs.microsoft.com/en-us/dotnet/api/system.diagnostics.codeanalysis.excludefromcodecoverageattribute?view=netcore-3.0)
+and [`DebuggerNonUserCode`](https://docs.microsoft.com/en-us/dotnet/api/system.diagnostics.debuggernonusercodeattribute?view=netcore-3.0)
+attributes.
 
-By defining the `NULLABLE_ATTRIBUTES_EXCLUDE_FROM_CODE_COVERAGE` constant, the
-[`ExcludeFromCodeCoverage`](https://docs.microsoft.com/en-us/dotnet/api/system.diagnostics.codeanalysis.excludefromcodecoverageattribute?view=netcore-3.0)
-attribute gets added to the nullable attribute classes, thus preventing them from appearing in
-the reports.
-
-> :warning: **Important:** <br/>
-> This is disabled by default, because certain target frameworks like .NET Standard 1.7 don't
-> support the [`ExcludeFromCodeCoverage`](https://docs.microsoft.com/en-us/dotnet/api/system.diagnostics.codeanalysis.excludefromcodecoverageattribute?view=netcore-3.0)
-> attribute.
-> Ensure that this attribute is supported by your target framework before defining this constant.
+By defining the `NULLABLE_ATTRIBUTES_INCLUDE_IN_CODE_COVERAGE` constant, the [`ExcludeFromCodeCoverage`](https://docs.microsoft.com/en-us/dotnet/api/system.diagnostics.codeanalysis.excludefromcodecoverageattribute?view=netcore-3.0)
+and [`DebuggerNonUserCode`](https://docs.microsoft.com/en-us/dotnet/api/system.diagnostics.debuggernonusercodeattribute?view=netcore-3.0)
+attributes are not applied and the nullable attributes may therefore appear in code coverage reports.
 
 
 ## Building
