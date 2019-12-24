@@ -43,7 +43,6 @@
 namespace System.Diagnostics.CodeAnalysis
 {
     using global::System;
-    using global::System.CodeDom.Compiler;
 
     /// <summary>
     ///     Specifies that <see langword="null"/> is allowed as an input even if the
@@ -54,7 +53,7 @@ namespace System.Diagnostics.CodeAnalysis
         Inherited = false
     )]
 #if !NULLABLE_ATTRIBUTES_INCLUDE_IN_CODE_COVERAGE
-    [DebuggerNonUserCode, GeneratedCode("https://www.nuget.org/packages/Nullable", "1.2.0")]
+    [DebuggerNonUserCode]
 #endif
     internal sealed class AllowNullAttribute : Attribute
     {
@@ -73,7 +72,7 @@ namespace System.Diagnostics.CodeAnalysis
         Inherited = false
     )]
 #if !NULLABLE_ATTRIBUTES_INCLUDE_IN_CODE_COVERAGE
-    [DebuggerNonUserCode, GeneratedCode("https://www.nuget.org/packages/Nullable", "1.2.0")]
+    [DebuggerNonUserCode]
 #endif
     internal sealed class DisallowNullAttribute : Attribute
     {
@@ -88,7 +87,7 @@ namespace System.Diagnostics.CodeAnalysis
     /// </summary>
     [AttributeUsage(AttributeTargets.Method, Inherited = false)]
 #if !NULLABLE_ATTRIBUTES_INCLUDE_IN_CODE_COVERAGE
-    [DebuggerNonUserCode, GeneratedCode("https://www.nuget.org/packages/Nullable", "1.2.0")]
+    [DebuggerNonUserCode]
 #endif
     internal sealed class DoesNotReturnAttribute : Attribute
     {
@@ -104,7 +103,7 @@ namespace System.Diagnostics.CodeAnalysis
     /// </summary>
     [AttributeUsage(AttributeTargets.Parameter, Inherited = false)]
 #if !NULLABLE_ATTRIBUTES_INCLUDE_IN_CODE_COVERAGE
-    [DebuggerNonUserCode, GeneratedCode("https://www.nuget.org/packages/Nullable", "1.2.0")]
+    [DebuggerNonUserCode]
 #endif
     internal sealed class DoesNotReturnIfAttribute : Attribute
     {
@@ -140,7 +139,7 @@ namespace System.Diagnostics.CodeAnalysis
         Inherited = false
     )]
 #if !NULLABLE_ATTRIBUTES_INCLUDE_IN_CODE_COVERAGE
-    [DebuggerNonUserCode, GeneratedCode("https://www.nuget.org/packages/Nullable", "1.2.0")]
+    [DebuggerNonUserCode]
 #endif
     internal sealed class MaybeNullAttribute : Attribute
     {
@@ -156,7 +155,7 @@ namespace System.Diagnostics.CodeAnalysis
     /// </summary>
     [AttributeUsage(AttributeTargets.Parameter, Inherited = false)]
 #if !NULLABLE_ATTRIBUTES_INCLUDE_IN_CODE_COVERAGE
-    [DebuggerNonUserCode, GeneratedCode("https://www.nuget.org/packages/Nullable", "1.2.0")]
+    [DebuggerNonUserCode]
 #endif
     internal sealed class MaybeNullWhenAttribute : Attribute
     {
@@ -189,7 +188,7 @@ namespace System.Diagnostics.CodeAnalysis
         Inherited = false
     )]
 #if !NULLABLE_ATTRIBUTES_INCLUDE_IN_CODE_COVERAGE
-    [DebuggerNonUserCode, GeneratedCode("https://www.nuget.org/packages/Nullable", "1.2.0")]
+    [DebuggerNonUserCode]
 #endif
     internal sealed class NotNullAttribute : Attribute
     {
@@ -209,7 +208,7 @@ namespace System.Diagnostics.CodeAnalysis
         Inherited = false
     )]
 #if !NULLABLE_ATTRIBUTES_INCLUDE_IN_CODE_COVERAGE
-    [DebuggerNonUserCode, GeneratedCode("https://www.nuget.org/packages/Nullable", "1.2.0")]
+    [DebuggerNonUserCode]
 #endif
     internal sealed class NotNullIfNotNullAttribute : Attribute
     {
@@ -243,7 +242,7 @@ namespace System.Diagnostics.CodeAnalysis
     /// </summary>
     [AttributeUsage(AttributeTargets.Parameter, Inherited = false)]
 #if !NULLABLE_ATTRIBUTES_INCLUDE_IN_CODE_COVERAGE
-    [DebuggerNonUserCode, GeneratedCode("https://www.nuget.org/packages/Nullable", "1.2.0")]
+    [DebuggerNonUserCode]
 #endif
     internal sealed class NotNullWhenAttribute : Attribute
     {
