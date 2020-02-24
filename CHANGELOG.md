@@ -7,7 +7,7 @@ generated XML documentation file of consumers of the package (see [issue #8](htt
 
 **Details:**
 
-For now, the attributes XML documentation is wrapped in `#if DEBUG` conditionals. This ensures that
+For now, the attribute's XML documentation is wrapped in `#if DEBUG` conditionals. This ensures that
 the attribute's XML documentation doesn't appear in the documentation file of a release build while
 still being available during development (e.g. for IntelliSense in Visual Studio).
 
