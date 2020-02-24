@@ -44,10 +44,12 @@ namespace System.Diagnostics.CodeAnalysis
 {
     using global::System;
 
+#if DEBUG
     /// <summary>
     ///     Specifies that <see langword="null"/> is allowed as an input even if the
     ///     corresponding type disallows it.
     /// </summary>
+#endif
     [AttributeUsage(
         AttributeTargets.Field | AttributeTargets.Parameter | AttributeTargets.Property, 
         Inherited = false
@@ -57,16 +59,20 @@ namespace System.Diagnostics.CodeAnalysis
 #endif
     internal sealed class AllowNullAttribute : Attribute
     {
+#if DEBUG
         /// <summary>
         ///     Initializes a new instance of the <see cref="AllowNullAttribute"/> class.
         /// </summary>
+#endif
         public AllowNullAttribute() { }
     }
 
+#if DEBUG
     /// <summary>
     ///     Specifies that <see langword="null"/> is disallowed as an input even if the
     ///     corresponding type allows it.
     /// </summary>
+#endif
     [AttributeUsage(
         AttributeTargets.Field | AttributeTargets.Parameter | AttributeTargets.Property, 
         Inherited = false
@@ -76,44 +82,56 @@ namespace System.Diagnostics.CodeAnalysis
 #endif
     internal sealed class DisallowNullAttribute : Attribute
     {
+#if DEBUG
         /// <summary>
         ///     Initializes a new instance of the <see cref="DisallowNullAttribute"/> class.
         /// </summary>
+#endif
         public DisallowNullAttribute() { }
     }
 
+#if DEBUG
     /// <summary>
     ///     Specifies that a method that will never return under any circumstance.
     /// </summary>
+#endif
     [AttributeUsage(AttributeTargets.Method, Inherited = false)]
 #if !NULLABLE_ATTRIBUTES_INCLUDE_IN_CODE_COVERAGE
     [ExcludeFromCodeCoverage, DebuggerNonUserCode]
 #endif
     internal sealed class DoesNotReturnAttribute : Attribute
     {
+#if DEBUG
         /// <summary>
         ///     Initializes a new instance of the <see cref="DoesNotReturnAttribute"/> class.
         /// </summary>
+        ///
+#endif
         public DoesNotReturnAttribute() { }
     }
 
+#if DEBUG
     /// <summary>
     ///     Specifies that the method will not return if the associated <see cref="Boolean"/>
     ///     parameter is passed the specified value.
     /// </summary>
+#endif
     [AttributeUsage(AttributeTargets.Parameter, Inherited = false)]
 #if !NULLABLE_ATTRIBUTES_INCLUDE_IN_CODE_COVERAGE
     [ExcludeFromCodeCoverage, DebuggerNonUserCode]
 #endif
     internal sealed class DoesNotReturnIfAttribute : Attribute
     {
+#if DEBUG
         /// <summary>
         ///     Gets the condition parameter value.
         ///     Code after the method is considered unreachable by diagnostics if the argument
         ///     to the associated parameter matches this value.
         /// </summary>
+#endif
         public bool ParameterValue { get; }
 
+#if DEBUG
         /// <summary>
         ///     Initializes a new instance of the <see cref="DoesNotReturnIfAttribute"/>
         ///     class with the specified parameter value.
@@ -123,16 +141,19 @@ namespace System.Diagnostics.CodeAnalysis
         ///     Code after the method is considered unreachable by diagnostics if the argument
         ///     to the associated parameter matches this value.
         /// </param>
+#endif
         public DoesNotReturnIfAttribute(bool parameterValue)
         {
             ParameterValue = parameterValue;
         }
     }
 
+#if DEBUG
     /// <summary>
     ///     Specifies that an output may be <see langword="null"/> even if the
     ///     corresponding type disallows it.
     /// </summary>
+#endif
     [AttributeUsage(
         AttributeTargets.Field | AttributeTargets.Parameter | 
         AttributeTargets.Property | AttributeTargets.ReturnValue, 
@@ -143,28 +164,35 @@ namespace System.Diagnostics.CodeAnalysis
 #endif
     internal sealed class MaybeNullAttribute : Attribute
     {
+#if DEBUG
         /// <summary>
         ///     Initializes a new instance of the <see cref="MaybeNullAttribute"/> class.
         /// </summary>
+#endif
         public MaybeNullAttribute() { }
     }
 
+#if DEBUG
     /// <summary>
     ///     Specifies that when a method returns <see cref="ReturnValue"/>, 
     ///     the parameter may be <see langword="null"/> even if the corresponding type disallows it.
     /// </summary>
+#endif
     [AttributeUsage(AttributeTargets.Parameter, Inherited = false)]
 #if !NULLABLE_ATTRIBUTES_INCLUDE_IN_CODE_COVERAGE
     [ExcludeFromCodeCoverage, DebuggerNonUserCode]
 #endif
     internal sealed class MaybeNullWhenAttribute : Attribute
     {
+#if DEBUG
         /// <summary>
         ///     Gets the return value condition.
         ///     If the method returns this value, the associated parameter may be <see langword="null"/>.
         /// </summary>
+#endif
         public bool ReturnValue { get; }
 
+#if DEBUG
         /// <summary>
         ///      Initializes the attribute with the specified return value condition.
         /// </summary>
@@ -172,16 +200,19 @@ namespace System.Diagnostics.CodeAnalysis
         ///     The return value condition.
         ///     If the method returns this value, the associated parameter may be <see langword="null"/>.
         /// </param>
+#endif
         public MaybeNullWhenAttribute(bool returnValue)
         {
             ReturnValue = returnValue;
         }
     }
 
+#if DEBUG
     /// <summary>
     ///     Specifies that an output is not <see langword="null"/> even if the
     ///     corresponding type allows it.
     /// </summary>
+#endif
     [AttributeUsage(
         AttributeTargets.Field | AttributeTargets.Parameter | 
         AttributeTargets.Property | AttributeTargets.ReturnValue, 
@@ -192,16 +223,20 @@ namespace System.Diagnostics.CodeAnalysis
 #endif
     internal sealed class NotNullAttribute : Attribute
     {
+#if DEBUG
         /// <summary>
         ///     Initializes a new instance of the <see cref="NotNullAttribute"/> class.
         /// </summary>
+#endif
         public NotNullAttribute() { }
     }
 
+#if DEBUG
     /// <summary>
     ///     Specifies that the output will be non-<see langword="null"/> if the
     ///     named parameter is non-<see langword="null"/>.
     /// </summary>
+#endif
     [AttributeUsage(
         AttributeTargets.Parameter | AttributeTargets.Property | AttributeTargets.ReturnValue, 
         AllowMultiple = true, 
@@ -212,13 +247,16 @@ namespace System.Diagnostics.CodeAnalysis
 #endif
     internal sealed class NotNullIfNotNullAttribute : Attribute
     {
+#if DEBUG
         /// <summary>
         ///     Gets the associated parameter name.
         ///     The output will be non-<see langword="null"/> if the argument to the
         ///     parameter specified is non-<see langword="null"/>.
         /// </summary>
+#endif
         public string ParameterName { get; }
 
+#if DEBUG
         /// <summary>
         ///     Initializes the attribute with the associated parameter name.
         /// </summary>
@@ -227,6 +265,7 @@ namespace System.Diagnostics.CodeAnalysis
         ///     The output will be non-<see langword="null"/> if the argument to the
         ///     parameter specified is non-<see langword="null"/>.
         /// </param>
+#endif
         public NotNullIfNotNullAttribute(string parameterName)
         {
             // .NET Core 3.0 doesn't throw an ArgumentNullException, even though this is
@@ -236,22 +275,27 @@ namespace System.Diagnostics.CodeAnalysis
         }
     }
 
+#if DEBUG
     /// <summary>
     ///     Specifies that when a method returns <see cref="ReturnValue"/>,
     ///     the parameter will not be <see langword="null"/> even if the corresponding type allows it.
     /// </summary>
+#endif
     [AttributeUsage(AttributeTargets.Parameter, Inherited = false)]
 #if !NULLABLE_ATTRIBUTES_INCLUDE_IN_CODE_COVERAGE
     [ExcludeFromCodeCoverage, DebuggerNonUserCode]
 #endif
     internal sealed class NotNullWhenAttribute : Attribute
     {
+#if DEBUG
         /// <summary>
         ///     Gets the return value condition.
         ///     If the method returns this value, the associated parameter will not be <see langword="null"/>.
         /// </summary>
+#endif
         public bool ReturnValue { get; }
 
+#if DEBUG
         /// <summary>
         ///     Initializes the attribute with the specified return value condition.
         /// </summary>
@@ -259,6 +303,7 @@ namespace System.Diagnostics.CodeAnalysis
         ///     The return value condition.
         ///     If the method returns this value, the associated parameter will not be <see langword="null"/>.
         /// </param>
+#endif
         public NotNullWhenAttribute(bool returnValue)
         {
             ReturnValue = returnValue;

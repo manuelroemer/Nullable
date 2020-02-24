@@ -1,5 +1,17 @@
 # Changelog
 
+# v1.2.1
+
+This release fixes the XML documentation from the nullable attributes leaking into the automatically
+generated XML documentation file of consumers of the package (see [issue #8](https://github.com/manuelroemer/Nullable/issues/8)).
+
+**Details:**
+
+For now, the attributes XML documentation is wrapped in `#if DEBUG` conditionals. This ensures that
+the attribute's XML documentation doesn't appear in the documentation file of a release build while
+still being available during development (e.g. for IntelliSense in Visual Studio).
+
+
 # v1.2.0
 
 This release provides solutions for [issue #1](https://github.com/manuelroemer/Nullable/issues/1) and

@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
     <id>Nullable</id>
-    <version>1.2.0</version>
+    <version>1.2.1</version>
     <developmentDependency>true</developmentDependency>
     <authors>Manuel Römer</authors>
     <license type="expression">MIT</license>
@@ -14,7 +14,7 @@ A source code only package which allows you to use .NET Core 3.0's new nullable 
 
 This package does not contain any compiled binaries, but instead adds a single C# file with the attribute classes to your project. Because this C# file gets compiled together with the rest of your code, the built binaries will not have a dependency on this package, meaning that you can perfectly use it for both libraries and applications.
 
-The C# file is only included if you are targeting a framework version which does not support the new nullable attributes. For example, if you create a library which multi-targets .NET Standard 2.0 and 2.1, the file is only included in the .NET Standard 2.0 version, because .NET Standard 2.1 already provides the nullable attributes by default. 
+The C# file is only included if you are targeting a framework version which does not support the new nullable attributes. For example, if you create a library which multi-targets .NET Standard 2.0 and 2.1, the file is only included in the .NET Standard 2.0 version, because .NET Standard 2.1 already provides the nullable attributes by default.
 
 Please see https://github.com/manuelroemer/Nullable for additional information on how to use this package.
     </description>
@@ -34,13 +34,13 @@ Please see https://github.com/manuelroemer/Nullable for additional information o
     * .NET Framework >= 4.0
     Depending on the target framework, pick a different file which makes use/doesn't make use of that attribute.
 
-    Include the file both as 'contentFiles' (for PackageReferences) and as 'content' (for packages.config). 
+    Include the file both as 'contentFiles' (for PackageReferences) and as 'content' (for packages.config).
     -->
-    
+
     <!-- contentFiles with ExcludeFromCodeCoverageAttribute-->
     <file src="Nullable.ExcludeFromCodeCoverage/NullableAttributes.cs.pp" exclude="**/obj/**/*.cs.pp" target="contentFiles/cs/netstandard2.0/Nullable/NullableAttributes.cs.pp"/>
     <file src="Nullable.ExcludeFromCodeCoverage/NullableAttributes.cs.pp" exclude="**/obj/**/*.cs.pp" target="contentFiles/cs/net40/Nullable/NullableAttributes.cs.pp"/>
-      
+
     <!-- contentFiles without ExcludeFromCodeCoverageAttribute -->
     <file src="Nullable.NoExcludeFromCodeCoverage/NullableAttributes.cs.pp" exclude="**/obj/**/*.cs.pp" target="contentFiles/cs/netstandard1.0/Nullable/NullableAttributes.cs.pp"/>
     <file src="Nullable.NoExcludeFromCodeCoverage/NullableAttributes.cs.pp" exclude="**/obj/**/*.cs.pp" target="contentFiles/cs/net20/Nullable/NullableAttributes.cs.pp"/>
@@ -48,11 +48,11 @@ Please see https://github.com/manuelroemer/Nullable for additional information o
     <!-- content with ExcludeFromCodeCoverageAttribute-->
     <file src="Nullable.ExcludeFromCodeCoverage/NullableAttributes.cs.pp" exclude="**/obj/**/*.cs.pp" target="content/netstandard2.0/Nullable/NullableAttributes.cs.pp"/>
     <file src="Nullable.ExcludeFromCodeCoverage/NullableAttributes.cs.pp" exclude="**/obj/**/*.cs.pp" target="content/net40/Nullable/NullableAttributes.cs.pp"/>
-      
+
     <!-- content without ExcludeFromCodeCoverageAttribute -->
     <file src="Nullable.NoExcludeFromCodeCoverage/NullableAttributes.cs.pp" exclude="**/obj/**/*.cs.pp" target="content/netstandard1.0/Nullable/NullableAttributes.cs.pp"/>
     <file src="Nullable.NoExcludeFromCodeCoverage/NullableAttributes.cs.pp" exclude="**/obj/**/*.cs.pp" target="content/net20/Nullable/NullableAttributes.cs.pp"/>
-    
+
     <!-- EXCLUDE the attributes in these target frameworks: -->
     <file src=".nuget/_._" target="contentFiles/cs/netstandard2.1"/>
     <file src=".nuget/_._" target="content/netstandard2.1"/>
