@@ -21,14 +21,13 @@ compiler will still use them for generating warnings, even though the target fra
 support these attributes by itself.
 
 This repository hosts the code for the ["Nullable" NuGet Package](https://www.nuget.org/packages/Nullable)
-which adds [a single C# source code file](https://github.com/manuelroemer/Nullable/blob/master/src/Nullable.ExcludeFromCodeCoverage/NullableAttributes.cs)
-redefining all of the new nullable attributes to projects which reference the package.
+which, when referenced, adds support for these attributes.
 
-This file is added **at compile time** and gets **built into the referencing project**.
+The code for these attributes is added **at compile time** and gets **built into the referencing project**.
 This means that the resulting project **does not have an explicit dependency** on the `Nullable`
 package, because the attributes are not distributed as a library.
 
-Futhermore, the file only gets added to the project, if the nullable attributes are not already
+Futhermore, the code only gets added to the project if the nullable attributes are not already
 supported by the target framework.
 The images below show an example - in the library which targets .NET Standard 2.0, the attributes
 have been added during the compilation.
@@ -56,7 +55,7 @@ install the package for your target framework.
 ## Quickstart
 
 > :warning: **Important:** <br/>
-> You **must** use C# 8.0 with the `Nullable` package - otherwise, your project won't compile.
+> You **must** use a C# version >= 8.0 with the `Nullable` package - otherwise, your project won't compile.
 
 The steps below assume that you are using the **new SDK `.csproj`** style.
 Please find installation guides and notes for other project types (for example `packages.config`)
@@ -127,8 +126,8 @@ In essence, no build has to be made at all. Instead, the `*.cs` files are rename
 (because otherwise, Visual Studio's solution explorer would display the files in a project which
 references the package) and then packaged into a NuGet package via a `.nuspec` file.
 
-The `build.ps1` file in the repository's root automates this process with a few extra benefits.
-Run this file for manually creating the package.
+The solution contains a `_build` project which automatically performs these tasks though. You can then
+find the resulting NuGet package file in the `artifacts` folder.
 
 
 ## Contributing
