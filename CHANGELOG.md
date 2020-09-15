@@ -1,5 +1,10 @@
 # Changelog
 
+# v1.3.0
+
+This release adds support for .NET 5's `MemberNotNullAttribute` and `MemberNotNullWhenAttribute`.
+
+
 # v1.2.1
 
 This release fixes the XML documentation from the nullable attributes leaking into the automatically
