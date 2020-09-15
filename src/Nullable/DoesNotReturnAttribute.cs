@@ -65,6 +65,6 @@ namespace System.Diagnostics.CodeAnalysis
     }
 }
 
-#pragma warning enable
+#pragma warning restore
 #nullable restore
 #endif // NULLABLE_ATTRIBUTES_DISABLE
