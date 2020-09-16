@@ -7,7 +7,7 @@
 //   Consider migrating to PackageReferences instead:
 //   https://docs.microsoft.com/en-us/nuget/consume-packages/migrate-packages-config-to-package-reference
 //   Migrating brings the following benefits:
-//   * The "Nullable" folder and the "NullableAttributes.cs" files don't appear in your project.
+//   * The "Nullable" folder and the nullable "*Attribute.cs" files don't appear in your project.
 //   * The added files are immutable and can therefore not be modified by coincidence.
 //   * Updating/Uninstalling the package will work flawlessly.
 // </auto-generated>
