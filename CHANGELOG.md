@@ -1,5 +1,18 @@
 # Changelog
 
+# v1.4.0
+
+Nullable feature is now automatically enabled by default.
+
+* For legacy frameworks (before NetCoreApp3.0/NetStandard2.1) warnings won't be raised:
+`<Nullable>Annotation</Nullable>`
+* While full activation is done only for recent frameworks (NetCoreApp3.0/NetStandard2.1 or more recent):
+`<Nullable>Enable</Nullable>`
+* And in all cases C# version is defined to use last version: `<LangVersion>Latest</LangVersion>`
+
+This are default values that are used if you do not override them in your csproj file.
+They have been chosen to match the most common use case which is multi-targeted projects that target recent frameworks that will produce the warnings and legacy frameworks that will just be annotated ignoring warnings related to the fact that the frameworks are not annotated. 
+
 # v1.3.0
 
 This release adds support for .NET 5's `MemberNotNullAttribute` and `MemberNotNullWhenAttribute`.

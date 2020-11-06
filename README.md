@@ -54,9 +54,6 @@ install the package for your target framework.
 
 ## Quickstart
 
-> :warning: **Important:** <br/>
-> You **must** use a C# version >= 8.0 with the `Nullable` package - otherwise, your project won't compile.
-
 The steps below assume that you are using the **new SDK `.csproj`** style.
 Please find installation guides and notes for other project types (for example `packages.config`)
 [here](https://github.com/manuelroemer/Nullable/wiki).
@@ -86,7 +83,31 @@ Please find installation guides and notes for other project types (for example `
 
    This is especially important for libraries that are published to NuGet, because without this,
    the library will have an **explicit dependency** on the `Nullable` package.
-3. **Build the project** <br/>
+3. **Ensure that your are using at least C#8** <br/>
+   You **must** use a C# version >= 8.0 with the `Nullable` package - otherwise, your project won't compile. <br/>
+   If you never specified the `<LangVersion>` property in you csproj, it's fine the package will setup it for you. Otherwise remove the tag, or update it to what you want to overload the value defined by the package.
+
+   By default the `Nullable` package declare for legacy frameworks (before NetCoreApp3.0/NetStandard2.1):
+
+   ```xml
+   <PropertyGroup>
+      <!-- so you can use nullable annotations but the compiler won't produce warnings -->
+      <!-- common use case is a multi-targeted project where warnings are produced only on recent -->
+      <!-- frameworks because they are annotated which avoid false positives on legacy frameworks.  -->
+     <Nullable>annotations</Nullable>
+     <LangVersion>Latest</LangVersion>
+   </PropertyGroup>
+   ```
+   and for recent frameworks (since NetCoreApp3.0/NetStandard2.1):
+
+   ```xml
+   <PropertyGroup>
+     <Nullable>enable</Nullable>
+     <LangVersion>Latest</LangVersion>
+   </PropertyGroup>
+   ```
+
+4. **Build the project** <br/>
    Ensure that the project compiles. If a build error occurs, you will most likely have to update
    the C# language version.
 
