@@ -6,6 +6,11 @@ _Use .NET Core 3.0's new nullable attributes in older target frameworks._
 
 <hr/>
 
+_You may also want to check out my [IsExternalInit](https://github.com/manuelroemer/IsExternalInit)
+project which provides support for C# 9's `init` and `record` keywords for older target frameworks._
+
+<hr/>
+
 
 With the release of C# 8.0, support for [nullable reference types](https://docs.microsoft.com/en-us/dotnet/csharp/tutorials/nullable-reference-types)
 has been added to the language.
