@@ -93,9 +93,37 @@ Please find installation guides and notes for other project types (for example `
    the library will have an **explicit dependency** on the `Nullable` package.
 3. **Build the project** <br/>
    Ensure that the project compiles. If a build error occurs, you will most likely have to update
-   the C# language version.
+   the C# language version (see next step).
+4. **Enable usage of the attributes** <br/>
+   Still in your `.csproj` file you need to activate the feature to fully use it.
+   The following activation sample is what seems to be the most common use case. But do not hesitate to look at my [guides](https://github.com/manuelroemer/Nullable/wiki) for other considerations.
 
-Afterwards, you can immediately start using the attributes.
+   ```xml
+   <PropertyGroup>
+      <!-- a sample list of target frameworks including legacy ones. This list must depend on your needs. -->
+     <TargetFrameworks>net472;netstandard2.0;netstandard2.1;netcoreapp3.0</TargetFrameworks>
+     <!-- force lang version at least to C#8 to be able to use the feature with all frameworks.-->
+     <LangVersion>8.0</LangVersion> <!-- or --> <LangVersion>latest</LangVersion>
+     <!-- enable the feature but without warning for legacy frameworks to avoid false positives. -->
+     <Nullable>annotations</Nullable>
+     <!-- enable the feature including warnings only on top of the most recent framework you target. -->
+     <!-- it will serve as a reference for warnings for all others. -->
+     <Nullable Condition="'$(TargetFramework)' == 'netcoreapp3.0'">enable</Nullable>
+   </PropertyGroup>
+   ```
+
+5. **Build the project and fix warnings** <br/>
+   If your not starting a new project you will probably get a lot of warnings now, since your code base is not yet annotated.
+   If you don't expect to fix all right now, one solution could be to disable the feature in all files before reviewing each file one by one.
+   For that run the following powershell script to add a `#nullable disable` directive at the top of each file.
+
+   ```PowerShell
+   Get-ChildItem -Recurse -Filter *.cs | ForEach-Object {
+     "#nullable disable`n" + (Get-Content $_ -Raw) | Set-Content $_
+   }
+   ```
+
+You should now be ready to play with nullable references and the attributes even when targeting legacy frameworks.
 
 
 ## Compiler Constants
