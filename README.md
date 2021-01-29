@@ -113,7 +113,7 @@ Please find installation guides and notes for other project types (for example `
    ```
 
 5. **Build the project and fix warnings** <br/>
-   If your not starting a new project you will probably get a lot of warnings now, since your code base is not yet annotated.
+   If you're not starting a new project you will probably get a lot of warnings now, since your code base is not yet annotated.
    If you don't expect to fix all right now, one solution could be to disable the feature in all files before reviewing each file one by one.
    For that run the following powershell script to add a `#nullable disable` directive at the top of each file.
 
