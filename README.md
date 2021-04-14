@@ -119,8 +119,8 @@ Please find installation guides and notes for other project types (for example `
    add the following configuration to your `.csproj` file:
    
    ```xml
-  &lt;UseWPF&gt;true&lt;/UseWPF&gt;
-  &lt;IncludePackageReferencesDuringMarkupCompilation&gt;true&lt;/IncludePackageReferencesDuringMarkupCompilation&gt;
+   <UseWPF>true</UseWPF>
+   <IncludePackageReferencesDuringMarkupCompilation>true</IncludePackageReferencesDuringMarkupCompilation>
    ```
 
 You should now be ready to use Nullable Reference Types and the corresponding attributes even when targeting legacy frameworks.
