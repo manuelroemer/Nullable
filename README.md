@@ -94,36 +94,36 @@ Please find installation guides and notes for other project types (for example `
 3. **Build the project** <br/>
    Ensure that the project compiles. If a build error occurs, you will most likely have to update
    the C# language version (see next step).
-4. **Enable usage of the attributes** <br/>
+4. **Enable Nullable Reference Types** <br/>
    Still in your `.csproj` file you need to activate the feature to fully use it.
-   The following activation sample is what seems to be the most common use case. But do not hesitate to look at my [guides](https://github.com/manuelroemer/Nullable/wiki) for other considerations.
+   The following activation sample is what seems to be the most common use case.
+   But do not hesitate to look at my [guides](https://github.com/manuelroemer/Nullable/wiki) for other considerations.
 
    ```xml
    <PropertyGroup>
-      <!-- a sample list of target frameworks including legacy ones. This list must depend on your needs. -->
+     <!-- Your desired target frameworks. -->
      <TargetFrameworks>net472;netstandard2.0;netstandard2.1;netcoreapp3.0</TargetFrameworks>
-     <!-- force lang version at least to C#8 to be able to use the feature with all frameworks.-->
+     
+     <!-- The C# language version to use. Must be at least 8.0 (other suggestions: 9.0, latest, preview).-->
      <LangVersion>8.0</LangVersion> <!-- or --> <LangVersion>latest</LangVersion>
-     <!-- enable the feature but without warning for legacy frameworks to avoid false positives. -->
-     <Nullable>annotations</Nullable>
-     <!-- enable the feature including warnings only on top of the most recent framework you target. -->
-     <!-- it will serve as a reference for warnings for all others. -->
-     <Nullable Condition="'$(TargetFramework)' == 'netcoreapp3.0'">enable</Nullable>
+       
+     <!-- Enable nullable reference types. You can also use "annotations" instead of "enable"
+          to prevent the compiler from emitting warnings. -->
+     <Nullable>enable</Nullable>
    </PropertyGroup>
    ```
-
-5. **Build the project and fix warnings** <br/>
-   If you're not starting a new project you will probably get a lot of warnings now, since your code base is not yet annotated.
-   If you don't expect to fix all right now, one solution could be to disable the feature in all files before reviewing each file one by one.
-   For that run the following powershell script to add a `#nullable disable` directive at the top of each file.
-
-   ```PowerShell
-   Get-ChildItem -Recurse -Filter *.cs | ForEach-Object {
-     "#nullable disable`n" + (Get-Content $_ -Raw) | Set-Content $_
-   }
+5. **For WPF users:**
+   There [have been issues](https://github.com/manuelroemer/Nullable/issues/11) with WPF projects in the past
+   which resulted in compilation errors, however these have been fixed with the .NET 5.0.102 SDK.
+   To get Nullable working with your WPF project, ensure that you are using an SDK >= 5.0.102 SDK and then
+   add the following configuration to your `.csproj` file:
+   
+   ```xml
+  <UseWPF>true</UseWPF>
+  <IncludePackageReferencesDuringMarkupCompilation>true</IncludePackageReferencesDuringMarkupCompilation>
    ```
 
-You should now be ready to play with nullable references and the attributes even when targeting legacy frameworks.
+You should now be ready to use Nullable Reference Types and the corresponding attributes even when targeting legacy frameworks.
 
 
 ## Compiler Constants
