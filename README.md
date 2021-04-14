@@ -112,15 +112,15 @@ Please find installation guides and notes for other project types (for example `
      <Nullable>enable</Nullable>
    </PropertyGroup>
    ```
-5. **For WPF users:**
+5. **For WPF users:** <br/>
    There [have been issues](https://github.com/manuelroemer/Nullable/issues/11) with WPF projects in the past
    which resulted in compilation errors, however these have been fixed with the .NET 5.0.102 SDK.
    To get Nullable working with your WPF project, ensure that you are using an SDK >= 5.0.102 SDK and then
    add the following configuration to your `.csproj` file:
    
    ```xml
-  <UseWPF>true</UseWPF>
-  <IncludePackageReferencesDuringMarkupCompilation>true</IncludePackageReferencesDuringMarkupCompilation>
+  &lt;UseWPF&gt;true&lt;/UseWPF&gt;
+  &lt;IncludePackageReferencesDuringMarkupCompilation&gt;true&lt;/IncludePackageReferencesDuringMarkupCompilation&gt;
    ```
 
 You should now be ready to use Nullable Reference Types and the corresponding attributes even when targeting legacy frameworks.
