@@ -78,13 +78,6 @@ class Build : NukeBuild
                 content = content.Replace("ExcludeFromCodeCoverage, ", "");
                 File.WriteAllText(noExcludeFromCodeCoverageFile.FullName, content);
             }
-
-            // Renaming the .cs files to .cs.pp ensures that the files aren't listed in VS's solution explorer
-            // when the package is consumed via NuGet. With .cs files, that happens.
-            foreach (var csFile in OutDirectory.GetFiles("*.cs", SearchOption.AllDirectories))
-            {
-                csFile.MoveTo($"{csFile.FullName}.pp");
-            }
         });
 
     Target Pack => _ => _

@@ -155,9 +155,7 @@ attributes are not applied and the nullable attributes may therefore appear in c
 ## Building
 
 Because the package consists of source files, building works differently than a normal .NET project.
-In essence, no build has to be made at all. Instead, the `*.cs` files are renamed to `*.cs.pp`
-(because otherwise, Visual Studio's solution explorer would display the files in a project which
-references the package) and then packaged into a NuGet package via a `.nuspec` file.
+In essence, no build has to be made at all. Instead, the `*.cs` files are packaged into a NuGet package via a `.nuspec` file.
 
 The solution contains a `_build` project which automatically performs these tasks though. You can then
 find the resulting NuGet package file in the `artifacts` folder.

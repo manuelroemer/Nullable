@@ -22,7 +22,7 @@ Please see https://github.com/manuelroemer/Nullable for additional information o
     <tags>source compiletime null nullable attributes allownull disallownull doesnotreturn doesnotreturnif maybenull maybenullwhen notnull notnullifnotnull notnullwhen membernotnull membernotnullwhen</tags>
     <icon>icon.png</icon>
     <contentFiles>
-      <files include="**/*.cs.pp"/>
+      <files include="**/*.cs"/>
     </contentFiles>
   </metadata>
   <files>
@@ -36,125 +36,126 @@ Please see https://github.com/manuelroemer/Nullable for additional information o
     -->
 
     <!-- >= .NET Standard 1.0 and >= .NET 1.0 require all attributes and don't support ExcludeFromCodeCoverageAttribute. -->
-    <file src="NoExcludeFromCodeCoverage/AllowNullAttribute.cs.pp" target="contentFiles/cs/netstandard1.0/Nullable/AllowNullAttribute.cs.pp"/>
-    <file src="NoExcludeFromCodeCoverage/DisallowNullAttribute.cs.pp" target="contentFiles/cs/netstandard1.0/Nullable/DisallowNullAttribute.cs.pp"/>
-    <file src="NoExcludeFromCodeCoverage/DoesNotReturnAttribute.cs.pp" target="contentFiles/cs/netstandard1.0/Nullable/DoesNotReturnAttribute.cs.pp"/>
-    <file src="NoExcludeFromCodeCoverage/DoesNotReturnIfAttribute.cs.pp" target="contentFiles/cs/netstandard1.0/Nullable/DoesNotReturnIfAttribute.cs.pp"/>
-    <file src="NoExcludeFromCodeCoverage/MaybeNullAttribute.cs.pp" target="contentFiles/cs/netstandard1.0/Nullable/MaybeNullAttribute.cs.pp"/>
-    <file src="NoExcludeFromCodeCoverage/MaybeNullWhenAttribute.cs.pp" target="contentFiles/cs/netstandard1.0/Nullable/MaybeNullWhenAttribute.cs.pp"/>
-    <file src="NoExcludeFromCodeCoverage/MemberNotNullAttribute.cs.pp" target="contentFiles/cs/netstandard1.0/Nullable/MemberNotNullAttribute.cs.pp"/>
-    <file src="NoExcludeFromCodeCoverage/MemberNotNullWhenAttribute.cs.pp" target="contentFiles/cs/netstandard1.0/Nullable/MemberNotNullWhenAttribute.cs.pp"/>
-    <file src="NoExcludeFromCodeCoverage/NotNullAttribute.cs.pp" target="contentFiles/cs/netstandard1.0/Nullable/NotNullAttribute.cs.pp"/>
-    <file src="NoExcludeFromCodeCoverage/NotNullIfNotNullAttribute.cs.pp" target="contentFiles/cs/netstandard1.0/Nullable/NotNullIfNotNullAttribute.cs.pp"/>
-    <file src="NoExcludeFromCodeCoverage/NotNullWhenAttribute.cs.pp" target="contentFiles/cs/netstandard1.0/Nullable/NotNullWhenAttribute.cs.pp"/>
+    <file src="NoExcludeFromCodeCoverage/AllowNullAttribute.cs" target="contentFiles/cs/netstandard1.0/Nullable/AllowNullAttribute.cs"/>
+    <file src="NoExcludeFromCodeCoverage/DisallowNullAttribute.cs" target="contentFiles/cs/netstandard1.0/Nullable/DisallowNullAttribute.cs"/>
+    <file src="NoExcludeFromCodeCoverage/DoesNotReturnAttribute.cs" target="contentFiles/cs/netstandard1.0/Nullable/DoesNotReturnAttribute.cs"/>
+    <file src="NoExcludeFromCodeCoverage/DoesNotReturnIfAttribute.cs" target="contentFiles/cs/netstandard1.0/Nullable/DoesNotReturnIfAttribute.cs"/>
+    <file src="NoExcludeFromCodeCoverage/MaybeNullAttribute.cs" target="contentFiles/cs/netstandard1.0/Nullable/MaybeNullAttribute.cs"/>
+    <file src="NoExcludeFromCodeCoverage/MaybeNullWhenAttribute.cs" target="contentFiles/cs/netstandard1.0/Nullable/MaybeNullWhenAttribute.cs"/>
+    <file src="NoExcludeFromCodeCoverage/MemberNotNullAttribute.cs" target="contentFiles/cs/netstandard1.0/Nullable/MemberNotNullAttribute.cs"/>
+    <file src="NoExcludeFromCodeCoverage/MemberNotNullWhenAttribute.cs" target="contentFiles/cs/netstandard1.0/Nullable/MemberNotNullWhenAttribute.cs"/>
+    <file src="NoExcludeFromCodeCoverage/NotNullAttribute.cs" target="contentFiles/cs/netstandard1.0/Nullable/NotNullAttribute.cs"/>
+    <file src="NoExcludeFromCodeCoverage/NotNullIfNotNullAttribute.cs" target="contentFiles/cs/netstandard1.0/Nullable/NotNullIfNotNullAttribute.cs"/>
+    <file src="NoExcludeFromCodeCoverage/NotNullWhenAttribute.cs" target="contentFiles/cs/netstandard1.0/Nullable/NotNullWhenAttribute.cs"/>
 
-    <file src="NoExcludeFromCodeCoverage/AllowNullAttribute.cs.pp" target="content/netstandard1.0/Nullable/AllowNullAttribute.cs.pp"/>
-    <file src="NoExcludeFromCodeCoverage/DisallowNullAttribute.cs.pp" target="content/netstandard1.0/Nullable/DisallowNullAttribute.cs.pp"/>
-    <file src="NoExcludeFromCodeCoverage/DoesNotReturnAttribute.cs.pp" target="content/netstandard1.0/Nullable/DoesNotReturnAttribute.cs.pp"/>
-    <file src="NoExcludeFromCodeCoverage/DoesNotReturnIfAttribute.cs.pp" target="content/netstandard1.0/Nullable/DoesNotReturnIfAttribute.cs.pp"/>
-    <file src="NoExcludeFromCodeCoverage/MaybeNullAttribute.cs.pp" target="content/netstandard1.0/Nullable/MaybeNullAttribute.cs.pp"/>
-    <file src="NoExcludeFromCodeCoverage/MaybeNullWhenAttribute.cs.pp" target="content/netstandard1.0/Nullable/MaybeNullWhenAttribute.cs.pp"/>
-    <file src="NoExcludeFromCodeCoverage/MemberNotNullAttribute.cs.pp" target="content/netstandard1.0/Nullable/MemberNotNullAttribute.cs.pp"/>
-    <file src="NoExcludeFromCodeCoverage/MemberNotNullWhenAttribute.cs.pp" target="content/netstandard1.0/Nullable/MemberNotNullWhenAttribute.cs.pp"/>
-    <file src="NoExcludeFromCodeCoverage/NotNullAttribute.cs.pp" target="content/netstandard1.0/Nullable/NotNullAttribute.cs.pp"/>
-    <file src="NoExcludeFromCodeCoverage/NotNullIfNotNullAttribute.cs.pp" target="content/netstandard1.0/Nullable/NotNullIfNotNullAttribute.cs.pp"/>
-    <file src="NoExcludeFromCodeCoverage/NotNullWhenAttribute.cs.pp" target="content/netstandard1.0/Nullable/NotNullWhenAttribute.cs.pp"/>
-
-
-      
-    <file src="NoExcludeFromCodeCoverage/AllowNullAttribute.cs.pp" target="contentFiles/cs/net20/Nullable/AllowNullAttribute.cs.pp"/>
-    <file src="NoExcludeFromCodeCoverage/DisallowNullAttribute.cs.pp" target="contentFiles/cs/net20/Nullable/DisallowNullAttribute.cs.pp"/>
-    <file src="NoExcludeFromCodeCoverage/DoesNotReturnAttribute.cs.pp" target="contentFiles/cs/net20/Nullable/DoesNotReturnAttribute.cs.pp"/>
-    <file src="NoExcludeFromCodeCoverage/DoesNotReturnIfAttribute.cs.pp" target="contentFiles/cs/net20/Nullable/DoesNotReturnIfAttribute.cs.pp"/>
-    <file src="NoExcludeFromCodeCoverage/MaybeNullAttribute.cs.pp" target="contentFiles/cs/net20/Nullable/MaybeNullAttribute.cs.pp"/>
-    <file src="NoExcludeFromCodeCoverage/MaybeNullWhenAttribute.cs.pp" target="contentFiles/cs/net20/Nullable/MaybeNullWhenAttribute.cs.pp"/>
-    <file src="NoExcludeFromCodeCoverage/MemberNotNullAttribute.cs.pp" target="contentFiles/cs/net20/Nullable/MemberNotNullAttribute.cs.pp"/>
-    <file src="NoExcludeFromCodeCoverage/MemberNotNullWhenAttribute.cs.pp" target="contentFiles/cs/net20/Nullable/MemberNotNullWhenAttribute.cs.pp"/>
-    <file src="NoExcludeFromCodeCoverage/NotNullAttribute.cs.pp" target="contentFiles/cs/net20/Nullable/NotNullAttribute.cs.pp"/>
-    <file src="NoExcludeFromCodeCoverage/NotNullIfNotNullAttribute.cs.pp" target="contentFiles/cs/net20/Nullable/NotNullIfNotNullAttribute.cs.pp"/>
-    <file src="NoExcludeFromCodeCoverage/NotNullWhenAttribute.cs.pp" target="contentFiles/cs/net20/Nullable/NotNullWhenAttribute.cs.pp"/>
-
-    <file src="NoExcludeFromCodeCoverage/AllowNullAttribute.cs.pp" target="content/net20/Nullable/AllowNullAttribute.cs.pp"/>
-    <file src="NoExcludeFromCodeCoverage/DisallowNullAttribute.cs.pp" target="content/net20/Nullable/DisallowNullAttribute.cs.pp"/>
-    <file src="NoExcludeFromCodeCoverage/DoesNotReturnAttribute.cs.pp" target="content/net20/Nullable/DoesNotReturnAttribute.cs.pp"/>
-    <file src="NoExcludeFromCodeCoverage/DoesNotReturnIfAttribute.cs.pp" target="content/net20/Nullable/DoesNotReturnIfAttribute.cs.pp"/>
-    <file src="NoExcludeFromCodeCoverage/MaybeNullAttribute.cs.pp" target="content/net20/Nullable/MaybeNullAttribute.cs.pp"/>
-    <file src="NoExcludeFromCodeCoverage/MaybeNullWhenAttribute.cs.pp" target="content/net20/Nullable/MaybeNullWhenAttribute.cs.pp"/>
-    <file src="NoExcludeFromCodeCoverage/MemberNotNullAttribute.cs.pp" target="content/net20/Nullable/MemberNotNullAttribute.cs.pp"/>
-    <file src="NoExcludeFromCodeCoverage/MemberNotNullWhenAttribute.cs.pp" target="content/net20/Nullable/MemberNotNullWhenAttribute.cs.pp"/>
-    <file src="NoExcludeFromCodeCoverage/NotNullAttribute.cs.pp" target="content/net20/Nullable/NotNullAttribute.cs.pp"/>
-    <file src="NoExcludeFromCodeCoverage/NotNullIfNotNullAttribute.cs.pp" target="content/net20/Nullable/NotNullIfNotNullAttribute.cs.pp"/>
-    <file src="NoExcludeFromCodeCoverage/NotNullWhenAttribute.cs.pp" target="content/net20/Nullable/NotNullWhenAttribute.cs.pp"/>
+    <file src="NoExcludeFromCodeCoverage/AllowNullAttribute.cs" target="content/netstandard1.0/Nullable/AllowNullAttribute.cs"/>
+    <file src="NoExcludeFromCodeCoverage/DisallowNullAttribute.cs" target="content/netstandard1.0/Nullable/DisallowNullAttribute.cs"/>
+    <file src="NoExcludeFromCodeCoverage/DoesNotReturnAttribute.cs" target="content/netstandard1.0/Nullable/DoesNotReturnAttribute.cs"/>
+    <file src="NoExcludeFromCodeCoverage/DoesNotReturnIfAttribute.cs" target="content/netstandard1.0/Nullable/DoesNotReturnIfAttribute.cs"/>
+    <file src="NoExcludeFromCodeCoverage/MaybeNullAttribute.cs" target="content/netstandard1.0/Nullable/MaybeNullAttribute.cs"/>
+    <file src="NoExcludeFromCodeCoverage/MaybeNullWhenAttribute.cs" target="content/netstandard1.0/Nullable/MaybeNullWhenAttribute.cs"/>
+    <file src="NoExcludeFromCodeCoverage/MemberNotNullAttribute.cs" target="content/netstandard1.0/Nullable/MemberNotNullAttribute.cs"/>
+    <file src="NoExcludeFromCodeCoverage/MemberNotNullWhenAttribute.cs" target="content/netstandard1.0/Nullable/MemberNotNullWhenAttribute.cs"/>
+    <file src="NoExcludeFromCodeCoverage/NotNullAttribute.cs" target="content/netstandard1.0/Nullable/NotNullAttribute.cs"/>
+    <file src="NoExcludeFromCodeCoverage/NotNullIfNotNullAttribute.cs" target="content/netstandard1.0/Nullable/NotNullIfNotNullAttribute.cs"/>
+    <file src="NoExcludeFromCodeCoverage/NotNullWhenAttribute.cs" target="content/netstandard1.0/Nullable/NotNullWhenAttribute.cs"/>
 
 
-      
+
+    <file src="NoExcludeFromCodeCoverage/AllowNullAttribute.cs" target="contentFiles/cs/net20/Nullable/AllowNullAttribute.cs"/>
+    <file src="NoExcludeFromCodeCoverage/DisallowNullAttribute.cs" target="contentFiles/cs/net20/Nullable/DisallowNullAttribute.cs"/>
+    <file src="NoExcludeFromCodeCoverage/DoesNotReturnAttribute.cs" target="contentFiles/cs/net20/Nullable/DoesNotReturnAttribute.cs"/>
+    <file src="NoExcludeFromCodeCoverage/DoesNotReturnIfAttribute.cs" target="contentFiles/cs/net20/Nullable/DoesNotReturnIfAttribute.cs"/>
+    <file src="NoExcludeFromCodeCoverage/MaybeNullAttribute.cs" target="contentFiles/cs/net20/Nullable/MaybeNullAttribute.cs"/>
+    <file src="NoExcludeFromCodeCoverage/MaybeNullWhenAttribute.cs" target="contentFiles/cs/net20/Nullable/MaybeNullWhenAttribute.cs"/>
+    <file src="NoExcludeFromCodeCoverage/MemberNotNullAttribute.cs" target="contentFiles/cs/net20/Nullable/MemberNotNullAttribute.cs"/>
+    <file src="NoExcludeFromCodeCoverage/MemberNotNullWhenAttribute.cs" target="contentFiles/cs/net20/Nullable/MemberNotNullWhenAttribute.cs"/>
+    <file src="NoExcludeFromCodeCoverage/NotNullAttribute.cs" target="contentFiles/cs/net20/Nullable/NotNullAttribute.cs"/>
+    <file src="NoExcludeFromCodeCoverage/NotNullIfNotNullAttribute.cs" target="contentFiles/cs/net20/Nullable/NotNullIfNotNullAttribute.cs"/>
+    <file src="NoExcludeFromCodeCoverage/NotNullWhenAttribute.cs" target="contentFiles/cs/net20/Nullable/NotNullWhenAttribute.cs"/>
+
+    <file src="NoExcludeFromCodeCoverage/AllowNullAttribute.cs" target="content/net20/Nullable/AllowNullAttribute.cs"/>
+    <file src="NoExcludeFromCodeCoverage/DisallowNullAttribute.cs" target="content/net20/Nullable/DisallowNullAttribute.cs"/>
+    <file src="NoExcludeFromCodeCoverage/DoesNotReturnAttribute.cs" target="content/net20/Nullable/DoesNotReturnAttribute.cs"/>
+    <file src="NoExcludeFromCodeCoverage/DoesNotReturnIfAttribute.cs" target="content/net20/Nullable/DoesNotReturnIfAttribute.cs"/>
+    <file src="NoExcludeFromCodeCoverage/MaybeNullAttribute.cs" target="content/net20/Nullable/MaybeNullAttribute.cs"/>
+    <file src="NoExcludeFromCodeCoverage/MaybeNullWhenAttribute.cs" target="content/net20/Nullable/MaybeNullWhenAttribute.cs"/>
+    <file src="NoExcludeFromCodeCoverage/MemberNotNullAttribute.cs" target="content/net20/Nullable/MemberNotNullAttribute.cs"/>
+    <file src="NoExcludeFromCodeCoverage/MemberNotNullWhenAttribute.cs" target="content/net20/Nullable/MemberNotNullWhenAttribute.cs"/>
+    <file src="NoExcludeFromCodeCoverage/NotNullAttribute.cs" target="content/net20/Nullable/NotNullAttribute.cs"/>
+    <file src="NoExcludeFromCodeCoverage/NotNullIfNotNullAttribute.cs" target="content/net20/Nullable/NotNullIfNotNullAttribute.cs"/>
+    <file src="NoExcludeFromCodeCoverage/NotNullWhenAttribute.cs" target="content/net20/Nullable/NotNullWhenAttribute.cs"/>
+
+
+
     <!-- >= .NET Standard 2.0 and >= .NET 4.0 require all attributes and support ExcludeFromCodeCoverageAttribute. -->
-    <file src="ExcludeFromCodeCoverage/AllowNullAttribute.cs.pp" target="contentFiles/cs/netstandard2.0/Nullable/AllowNullAttribute.cs.pp"/>
-    <file src="ExcludeFromCodeCoverage/DisallowNullAttribute.cs.pp" target="contentFiles/cs/netstandard2.0/Nullable/DisallowNullAttribute.cs.pp"/>
-    <file src="ExcludeFromCodeCoverage/DoesNotReturnAttribute.cs.pp" target="contentFiles/cs/netstandard2.0/Nullable/DoesNotReturnAttribute.cs.pp"/>
-    <file src="ExcludeFromCodeCoverage/DoesNotReturnIfAttribute.cs.pp" target="contentFiles/cs/netstandard2.0/Nullable/DoesNotReturnIfAttribute.cs.pp"/>
-    <file src="ExcludeFromCodeCoverage/MaybeNullAttribute.cs.pp" target="contentFiles/cs/netstandard2.0/Nullable/MaybeNullAttribute.cs.pp"/>
-    <file src="ExcludeFromCodeCoverage/MaybeNullWhenAttribute.cs.pp" target="contentFiles/cs/netstandard2.0/Nullable/MaybeNullWhenAttribute.cs.pp"/>
-    <file src="ExcludeFromCodeCoverage/MemberNotNullAttribute.cs.pp" target="contentFiles/cs/netstandard2.0/Nullable/MemberNotNullAttribute.cs.pp"/>
-    <file src="ExcludeFromCodeCoverage/MemberNotNullWhenAttribute.cs.pp" target="contentFiles/cs/netstandard2.0/Nullable/MemberNotNullWhenAttribute.cs.pp"/>
-    <file src="ExcludeFromCodeCoverage/NotNullAttribute.cs.pp" target="contentFiles/cs/netstandard2.0/Nullable/NotNullAttribute.cs.pp"/>
-    <file src="ExcludeFromCodeCoverage/NotNullIfNotNullAttribute.cs.pp" target="contentFiles/cs/netstandard2.0/Nullable/NotNullIfNotNullAttribute.cs.pp"/>
-    <file src="ExcludeFromCodeCoverage/NotNullWhenAttribute.cs.pp" target="contentFiles/cs/netstandard2.0/Nullable/NotNullWhenAttribute.cs.pp"/>
+    <file src="ExcludeFromCodeCoverage/AllowNullAttribute.cs" target="contentFiles/cs/netstandard2.0/Nullable/AllowNullAttribute.cs"/>
+    <file src="ExcludeFromCodeCoverage/DisallowNullAttribute.cs" target="contentFiles/cs/netstandard2.0/Nullable/DisallowNullAttribute.cs"/>
+    <file src="ExcludeFromCodeCoverage/DoesNotReturnAttribute.cs" target="contentFiles/cs/netstandard2.0/Nullable/DoesNotReturnAttribute.cs"/>
+    <file src="ExcludeFromCodeCoverage/DoesNotReturnIfAttribute.cs" target="contentFiles/cs/netstandard2.0/Nullable/DoesNotReturnIfAttribute.cs"/>
+    <file src="ExcludeFromCodeCoverage/MaybeNullAttribute.cs" target="contentFiles/cs/netstandard2.0/Nullable/MaybeNullAttribute.cs"/>
+    <file src="ExcludeFromCodeCoverage/MaybeNullWhenAttribute.cs" target="contentFiles/cs/netstandard2.0/Nullable/MaybeNullWhenAttribute.cs"/>
+    <file src="ExcludeFromCodeCoverage/MemberNotNullAttribute.cs" target="contentFiles/cs/netstandard2.0/Nullable/MemberNotNullAttribute.cs"/>
+    <file src="ExcludeFromCodeCoverage/MemberNotNullWhenAttribute.cs" target="contentFiles/cs/netstandard2.0/Nullable/MemberNotNullWhenAttribute.cs"/>
+    <file src="ExcludeFromCodeCoverage/NotNullAttribute.cs" target="contentFiles/cs/netstandard2.0/Nullable/NotNullAttribute.cs"/>
+    <file src="ExcludeFromCodeCoverage/NotNullIfNotNullAttribute.cs" target="contentFiles/cs/netstandard2.0/Nullable/NotNullIfNotNullAttribute.cs"/>
+    <file src="ExcludeFromCodeCoverage/NotNullWhenAttribute.cs" target="contentFiles/cs/netstandard2.0/Nullable/NotNullWhenAttribute.cs"/>
 
-    <file src="NoExcludeFromCodeCoverage/AllowNullAttribute.cs.pp" target="content/netstandard2.0/Nullable/AllowNullAttribute.cs.pp"/>
-    <file src="NoExcludeFromCodeCoverage/DisallowNullAttribute.cs.pp" target="content/netstandard2.0/Nullable/DisallowNullAttribute.cs.pp"/>
-    <file src="NoExcludeFromCodeCoverage/DoesNotReturnAttribute.cs.pp" target="content/netstandard2.0/Nullable/DoesNotReturnAttribute.cs.pp"/>
-    <file src="NoExcludeFromCodeCoverage/DoesNotReturnIfAttribute.cs.pp" target="content/netstandard2.0/Nullable/DoesNotReturnIfAttribute.cs.pp"/>
-    <file src="NoExcludeFromCodeCoverage/MaybeNullAttribute.cs.pp" target="content/netstandard2.0/Nullable/MaybeNullAttribute.cs.pp"/>
-    <file src="NoExcludeFromCodeCoverage/MaybeNullWhenAttribute.cs.pp" target="content/netstandard2.0/Nullable/MaybeNullWhenAttribute.cs.pp"/>
-    <file src="NoExcludeFromCodeCoverage/MemberNotNullAttribute.cs.pp" target="content/netstandard2.0/Nullable/MemberNotNullAttribute.cs.pp"/>
-    <file src="NoExcludeFromCodeCoverage/MemberNotNullWhenAttribute.cs.pp" target="content/netstandard2.0/Nullable/MemberNotNullWhenAttribute.cs.pp"/>
-    <file src="NoExcludeFromCodeCoverage/NotNullAttribute.cs.pp" target="content/netstandard2.0/Nullable/NotNullAttribute.cs.pp"/>
-    <file src="NoExcludeFromCodeCoverage/NotNullIfNotNullAttribute.cs.pp" target="content/netstandard2.0/Nullable/NotNullIfNotNullAttribute.cs.pp"/>
-    <file src="NoExcludeFromCodeCoverage/NotNullWhenAttribute.cs.pp" target="content/netstandard2.0/Nullable/NotNullWhenAttribute.cs.pp"/>
-
-
-      
-    <file src="ExcludeFromCodeCoverage/AllowNullAttribute.cs.pp" target="contentFiles/cs/net40/Nullable/AllowNullAttribute.cs.pp"/>
-    <file src="ExcludeFromCodeCoverage/DisallowNullAttribute.cs.pp" target="contentFiles/cs/net40/Nullable/DisallowNullAttribute.cs.pp"/>
-    <file src="ExcludeFromCodeCoverage/DoesNotReturnAttribute.cs.pp" target="contentFiles/cs/net40/Nullable/DoesNotReturnAttribute.cs.pp"/>
-    <file src="ExcludeFromCodeCoverage/DoesNotReturnIfAttribute.cs.pp" target="contentFiles/cs/net40/Nullable/DoesNotReturnIfAttribute.cs.pp"/>
-    <file src="ExcludeFromCodeCoverage/MaybeNullAttribute.cs.pp" target="contentFiles/cs/net40/Nullable/MaybeNullAttribute.cs.pp"/>
-    <file src="ExcludeFromCodeCoverage/MaybeNullWhenAttribute.cs.pp" target="contentFiles/cs/net40/Nullable/MaybeNullWhenAttribute.cs.pp"/>
-    <file src="ExcludeFromCodeCoverage/MemberNotNullAttribute.cs.pp" target="contentFiles/cs/net40/Nullable/MemberNotNullAttribute.cs.pp"/>
-    <file src="ExcludeFromCodeCoverage/MemberNotNullWhenAttribute.cs.pp" target="contentFiles/cs/net40/Nullable/MemberNotNullWhenAttribute.cs.pp"/>
-    <file src="ExcludeFromCodeCoverage/NotNullAttribute.cs.pp" target="contentFiles/cs/net40/Nullable/NotNullAttribute.cs.pp"/>
-    <file src="ExcludeFromCodeCoverage/NotNullIfNotNullAttribute.cs.pp" target="contentFiles/cs/net40/Nullable/NotNullIfNotNullAttribute.cs.pp"/>
-    <file src="ExcludeFromCodeCoverage/NotNullWhenAttribute.cs.pp" target="contentFiles/cs/net40/Nullable/NotNullWhenAttribute.cs.pp"/>
-
-    <file src="NoExcludeFromCodeCoverage/AllowNullAttribute.cs.pp" target="content/net40/Nullable/AllowNullAttribute.cs.pp"/>
-    <file src="NoExcludeFromCodeCoverage/DisallowNullAttribute.cs.pp" target="content/net40/Nullable/DisallowNullAttribute.cs.pp"/>
-    <file src="NoExcludeFromCodeCoverage/DoesNotReturnAttribute.cs.pp" target="content/net40/Nullable/DoesNotReturnAttribute.cs.pp"/>
-    <file src="NoExcludeFromCodeCoverage/DoesNotReturnIfAttribute.cs.pp" target="content/net40/Nullable/DoesNotReturnIfAttribute.cs.pp"/>
-    <file src="NoExcludeFromCodeCoverage/MaybeNullAttribute.cs.pp" target="content/net40/Nullable/MaybeNullAttribute.cs.pp"/>
-    <file src="NoExcludeFromCodeCoverage/MaybeNullWhenAttribute.cs.pp" target="content/net40/Nullable/MaybeNullWhenAttribute.cs.pp"/>
-    <file src="NoExcludeFromCodeCoverage/MemberNotNullAttribute.cs.pp" target="content/net40/Nullable/MemberNotNullAttribute.cs.pp"/>
-    <file src="NoExcludeFromCodeCoverage/MemberNotNullWhenAttribute.cs.pp" target="content/net40/Nullable/MemberNotNullWhenAttribute.cs.pp"/>
-    <file src="NoExcludeFromCodeCoverage/NotNullAttribute.cs.pp" target="content/net40/Nullable/NotNullAttribute.cs.pp"/>
-    <file src="NoExcludeFromCodeCoverage/NotNullIfNotNullAttribute.cs.pp" target="content/net40/Nullable/NotNullIfNotNullAttribute.cs.pp"/>
-    <file src="NoExcludeFromCodeCoverage/NotNullWhenAttribute.cs.pp" target="content/net40/Nullable/NotNullWhenAttribute.cs.pp"/>
+    <file src="NoExcludeFromCodeCoverage/AllowNullAttribute.cs" target="content/netstandard2.0/Nullable/AllowNullAttribute.cs"/>
+    <file src="NoExcludeFromCodeCoverage/DisallowNullAttribute.cs" target="content/netstandard2.0/Nullable/DisallowNullAttribute.cs"/>
+    <file src="NoExcludeFromCodeCoverage/DoesNotReturnAttribute.cs" target="content/netstandard2.0/Nullable/DoesNotReturnAttribute.cs"/>
+    <file src="NoExcludeFromCodeCoverage/DoesNotReturnIfAttribute.cs" target="content/netstandard2.0/Nullable/DoesNotReturnIfAttribute.cs"/>
+    <file src="NoExcludeFromCodeCoverage/MaybeNullAttribute.cs" target="content/netstandard2.0/Nullable/MaybeNullAttribute.cs"/>
+    <file src="NoExcludeFromCodeCoverage/MaybeNullWhenAttribute.cs" target="content/netstandard2.0/Nullable/MaybeNullWhenAttribute.cs"/>
+    <file src="NoExcludeFromCodeCoverage/MemberNotNullAttribute.cs" target="content/netstandard2.0/Nullable/MemberNotNullAttribute.cs"/>
+    <file src="NoExcludeFromCodeCoverage/MemberNotNullWhenAttribute.cs" target="content/netstandard2.0/Nullable/MemberNotNullWhenAttribute.cs"/>
+    <file src="NoExcludeFromCodeCoverage/NotNullAttribute.cs" target="content/netstandard2.0/Nullable/NotNullAttribute.cs"/>
+    <file src="NoExcludeFromCodeCoverage/NotNullIfNotNullAttribute.cs" target="content/netstandard2.0/Nullable/NotNullIfNotNullAttribute.cs"/>
+    <file src="NoExcludeFromCodeCoverage/NotNullWhenAttribute.cs" target="content/netstandard2.0/Nullable/NotNullWhenAttribute.cs"/>
 
 
-      
+
+    <file src="ExcludeFromCodeCoverage/AllowNullAttribute.cs" target="contentFiles/cs/net40/Nullable/AllowNullAttribute.cs"/>
+    <file src="ExcludeFromCodeCoverage/DisallowNullAttribute.cs" target="contentFiles/cs/net40/Nullable/DisallowNullAttribute.cs"/>
+    <file src="ExcludeFromCodeCoverage/DoesNotReturnAttribute.cs" target="contentFiles/cs/net40/Nullable/DoesNotReturnAttribute.cs"/>
+    <file src="ExcludeFromCodeCoverage/DoesNotReturnIfAttribute.cs" target="contentFiles/cs/net40/Nullable/DoesNotReturnIfAttribute.cs"/>
+    <file src="ExcludeFromCodeCoverage/MaybeNullAttribute.cs" target="contentFiles/cs/net40/Nullable/MaybeNullAttribute.cs"/>
+    <file src="ExcludeFromCodeCoverage/MaybeNullWhenAttribute.cs" target="contentFiles/cs/net40/Nullable/MaybeNullWhenAttribute.cs"/>
+    <file src="ExcludeFromCodeCoverage/MemberNotNullAttribute.cs" target="contentFiles/cs/net40/Nullable/MemberNotNullAttribute.cs"/>
+    <file src="ExcludeFromCodeCoverage/MemberNotNullWhenAttribute.cs" target="contentFiles/cs/net40/Nullable/MemberNotNullWhenAttribute.cs"/>
+    <file src="ExcludeFromCodeCoverage/NotNullAttribute.cs" target="contentFiles/cs/net40/Nullable/NotNullAttribute.cs"/>
+    <file src="ExcludeFromCodeCoverage/NotNullIfNotNullAttribute.cs" target="contentFiles/cs/net40/Nullable/NotNullIfNotNullAttribute.cs"/>
+    <file src="ExcludeFromCodeCoverage/NotNullWhenAttribute.cs" target="contentFiles/cs/net40/Nullable/NotNullWhenAttribute.cs"/>
+
+    <file src="NoExcludeFromCodeCoverage/AllowNullAttribute.cs" target="content/net40/Nullable/AllowNullAttribute.cs"/>
+    <file src="NoExcludeFromCodeCoverage/DisallowNullAttribute.cs" target="content/net40/Nullable/DisallowNullAttribute.cs"/>
+    <file src="NoExcludeFromCodeCoverage/DoesNotReturnAttribute.cs" target="content/net40/Nullable/DoesNotReturnAttribute.cs"/>
+    <file src="NoExcludeFromCodeCoverage/DoesNotReturnIfAttribute.cs" target="content/net40/Nullable/DoesNotReturnIfAttribute.cs"/>
+    <file src="NoExcludeFromCodeCoverage/MaybeNullAttribute.cs" target="content/net40/Nullable/MaybeNullAttribute.cs"/>
+    <file src="NoExcludeFromCodeCoverage/MaybeNullWhenAttribute.cs" target="content/net40/Nullable/MaybeNullWhenAttribute.cs"/>
+    <file src="NoExcludeFromCodeCoverage/MemberNotNullAttribute.cs" target="content/net40/Nullable/MemberNotNullAttribute.cs"/>
+    <file src="NoExcludeFromCodeCoverage/MemberNotNullWhenAttribute.cs" target="content/net40/Nullable/MemberNotNullWhenAttribute.cs"/>
+    <file src="NoExcludeFromCodeCoverage/NotNullAttribute.cs" target="content/net40/Nullable/NotNullAttribute.cs"/>
+    <file src="NoExcludeFromCodeCoverage/NotNullIfNotNullAttribute.cs" target="content/net40/Nullable/NotNullIfNotNullAttribute.cs"/>
+    <file src="NoExcludeFromCodeCoverage/NotNullWhenAttribute.cs" target="content/net40/Nullable/NotNullWhenAttribute.cs"/>
+
+
+
     <!-- >= .NET Standard 2.1 only requires MemberNotNullAttribute and MemberNotNullWhenAttribute. -->
-    <file src="ExcludeFromCodeCoverage/MemberNotNullAttribute.cs.pp" target="contentFiles/cs/netstandard2.1/Nullable/MemberNotNullAttribute.cs.pp"/>
-    <file src="ExcludeFromCodeCoverage/MemberNotNullWhenAttribute.cs.pp" target="contentFiles/cs/netstandard2.1/Nullable/MemberNotNullWhenAttribute.cs.pp"/>
+    <file src="ExcludeFromCodeCoverage/MemberNotNullAttribute.cs" target="contentFiles/cs/netstandard2.1/Nullable/MemberNotNullAttribute.cs"/>
+    <file src="ExcludeFromCodeCoverage/MemberNotNullWhenAttribute.cs" target="contentFiles/cs/netstandard2.1/Nullable/MemberNotNullWhenAttribute.cs"/>
 
-    <file src="NoExcludeFromCodeCoverage/MemberNotNullAttribute.cs.pp" target="content/netstandard2.1/Nullable/MemberNotNullAttribute.cs.pp"/>
-    <file src="NoExcludeFromCodeCoverage/MemberNotNullWhenAttribute.cs.pp" target="content/netstandard2.1/Nullable/MemberNotNullWhenAttribute.cs.pp"/>
+    <file src="NoExcludeFromCodeCoverage/MemberNotNullAttribute.cs" target="content/netstandard2.1/Nullable/MemberNotNullAttribute.cs"/>
+    <file src="NoExcludeFromCodeCoverage/MemberNotNullWhenAttribute.cs" target="content/netstandard2.1/Nullable/MemberNotNullWhenAttribute.cs"/>
 
 
-      
+
     <!-- >= .NET 5 has all attributes. -->
     <file src="../../src/.nuget/_._" target="contentFiles/cs/net5.0"/>
     <file src="../../src/.nuget/_._" target="content/net5.0"/>
 
-
+    <!-- Hide content files from Visual Studio solution explorer  -->
+    <file src="../../src/Nullable/Nullable.props" target="build/Nullable.props" />
 
     <!-- Package icon. -->
     <file src="../../assets/Icon128x128.png" target="icon.png" />
