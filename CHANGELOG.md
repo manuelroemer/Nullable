@@ -1,5 +1,14 @@
 # Changelog
 
+# v1.3.1
+
+This release addresses issues with the .NET 6.0.300 SDK where the source files are no longer
+available when running certain builds. The underlying issue is most likely a bug in the .NET SDK
+itself (see https://github.com/dotnet/sdk/issues/25758) for details), but this package version
+might find a workaround.
+Big thanks to https://github.com/gtbuchanan for coming up with and making the fix!
+
+
 # v1.3.0
 
 This release adds support for .NET 5's `MemberNotNullAttribute` and `MemberNotNullWhenAttribute`.
