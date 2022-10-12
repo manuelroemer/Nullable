@@ -9,7 +9,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="NuGet.CommandLine" Version="5.7.2" PrivateAssets="All" />
+    <PackageReference Include="NuGet.CommandLine" Version="5.9.3" PrivateAssets="All" />
     <PackageReference Include="Nuke.Common" Version="0.24.11" />
   </ItemGroup>
 </Project>
